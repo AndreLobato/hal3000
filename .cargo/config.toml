@@ -1,0 +1,8 @@
+[build]
+target="arm-unknown-linux-gnueabihf"
+
+[target.arm-unknown-linux-gnueabihf]
+linker="arm-linux-gnueabihf-gcc-10"
+ar="arm-linux-gnueabihf-gcc-ar-10"
+rustflags = [ "-L", "/usr/lib/gcc/arm-linux-gnueabihf/10" ]
+

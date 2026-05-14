@@ -1,6 +1,6 @@
 use rpi_led_matrix::{LedMatrix, LedMatrixOptions};
 use embedded_graphics::{mono_font::{MonoTextStyle, ascii::FONT_6X10}, pixelcolor::{Rgb888}, prelude::*, primitives::{Circle, PrimitiveStyleBuilder}, text::Text};
-use std::{sync::{Arc, Mutex}, thread::{self, sleep}, time::Duration};
+use std::{sync::{Arc, Mutex}, thread::{self}};
 use tokio::{task};
 
 struct HalState {
@@ -45,7 +45,7 @@ async fn say_hi(state: Arc<Mutex<HalState>>) {
             s.text = counter.to_string();
             counter += 1;
         }
-        let _ = sleep(Duration::from_secs(3));
+        //let _ = sleep(Duration::from_secs(3));
     }
 }
 
