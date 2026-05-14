@@ -1,0 +1,9 @@
+[package]
+name = "hal3000"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+embedded-graphics = "0.7.1"
+rpi-led-matrix = { version = "0.4.0", features = ["stdcpp-static-link"] }
+tokio = { version = "1.52.3", features = ["full", "rt", "sync"] }
